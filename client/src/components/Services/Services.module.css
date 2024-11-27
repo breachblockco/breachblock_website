@@ -1,0 +1,47 @@
+.subHeading {
+  background: linear-gradient(90deg, #0a6ed9 0%, #064281 100%);
+  -webkit-background-clip: text; /* Clips the background to the text */
+  -webkit-text-fill-color: transparent; /* Makes the text transparent, showing the gradient */
+}
+
+.gradientBackground {
+  background: linear-gradient(90deg, #0a6ed9 0%, #064281 100%);
+}
+
+@keyframes borderMotion {
+  0% {
+    border-top-color: #00bcd4; /* Cyan */
+    border-right-color: #00bcd4; /* Cyan */
+    border-bottom-color: #4caf50; /* Teal */
+    border-left-color: #4caf50; /* Teal */
+  }
+  25% {
+    border-top-color: #4caf50; /* Teal */
+    border-right-color: #00bcd4; /* Cyan */
+    border-bottom-color: #00bcd4; /* Cyan */
+    border-left-color: #4caf50; /* Teal */
+  }
+  50% {
+    border-top-color: #4caf50; /* Teal */
+    border-right-color: #4caf50; /* Teal */
+    border-bottom-color: #00bcd4; /* Cyan */
+    border-left-color: #00bcd4; /* Cyan */
+  }
+  75% {
+    border-top-color: #00bcd4; /* Cyan */
+    border-right-color: #4caf50; /* Teal */
+    border-bottom-color: #4caf50; /* Teal */
+    border-left-color: #00bcd4; /* Cyan */
+  }
+  100% {
+    border-top-color: #4caf50; /* Teal */
+    border-right-color: #4caf50; /* Teal */
+    border-bottom-color: #00bcd4; /* Cyan */
+    border-left-color: #00bcd4; /* Cyan */
+  }
+}
+
+
+.animateBorderMotion {
+  animation: borderMotion 5s ease-in-out infinite;
+}
