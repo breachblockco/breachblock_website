@@ -101,7 +101,7 @@ function Footer() {
                 isCollapsed ? "max-h-0 overflow-hidden" : "max-h-screen"
               }`}
             >
-              <div className="flex flex-col gap-3 mt-4 text-white">
+              <div className="flex flex-col gap-3 mt-4 text-white items-start">
                 <button onClick={() => scrollToSection("main")}>Home</button>
                 <button>My Learnings</button>
                 <button onClick={() => scrollToSection("courses")}>
