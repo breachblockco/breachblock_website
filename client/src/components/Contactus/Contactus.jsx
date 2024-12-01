@@ -33,7 +33,7 @@ function Contactus() {
           </div>
         </div>
         <div className="sm:w-1/2 w-full flex flex-col">
-          <h4 className="sm:text-[66px] text-[30px] orbitron-family text-white leading-none sm:text-left text-center">
+          <h4 className="sm:text-[60px] text-[30px] orbitron-family text-white leading-none sm:text-left text-center">
             Have a Question on Mind?
           </h4>
           <form

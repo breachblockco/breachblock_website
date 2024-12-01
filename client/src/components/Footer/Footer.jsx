@@ -9,6 +9,9 @@ import { FaYoutube } from "react-icons/fa";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 function Footer() {
+  const scrollToSection = (ref) => {
+    document.getElementById(ref).scrollIntoView({ behavior: "smooth" });
+  };
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [isServicesCollapsed, setIsServicesCollapsed] = useState(true);
 
@@ -99,11 +102,14 @@ function Footer() {
               }`}
             >
               <div className="flex flex-col gap-3 mt-4 text-white">
-                <p>Front End Development</p>
-                <p>Backend Development</p>
-                <p>Mobile Pen Testing</p>
-                <p>API Pen Testing</p>
-                <p>Website Pen Testing</p>
+                <button onClick={() => scrollToSection("main")}>Home</button>
+                <button>My Learnings</button>
+                <button onClick={() => scrollToSection("courses")}>
+                  All Courses
+                </button>
+                <button onClick={() => scrollToSection("about")}>
+                  About Us
+                </button>
               </div>
             </div>
           </div>
