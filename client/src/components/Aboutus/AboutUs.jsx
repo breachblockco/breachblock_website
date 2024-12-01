@@ -43,21 +43,11 @@ const AboutUs =React.forwardRef(({ref}) =>{
             exceptional services and fostering a secure digital future.
           </p>
           <div className="flex items-center justify-between mt-3">
-            <h6 className="capitalize sm:text-[18px] text-[14px] font-semibold orbitron-family">
+            <h6 className="capitalize sm:text-[24px] text-[14px] font-semibold orbitron-family">
               empowering{" "}
               <span className={`${styles.subHeading}`}>learning,</span>{" "}
               inspiring <span className={`${styles.subHeading}`}>growth</span>
             </h6>
-            <div className="sm:flex gap-3 hidden">
-              <Button btntext={"Read More"} color={"#000"} fs={"16px"} />
-              <div className="w-[40px] h-[40px] rounded-full border-[1px] border-black flex justify-center items-center text-black">
-                <img
-                  src="/icons/services_icons/arrow.svg"
-                  alt=""
-                  className="w-4 text-black"
-                />
-              </div>
-            </div>
           </div>
         </div>
       </div>
