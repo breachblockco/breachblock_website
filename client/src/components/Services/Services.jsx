@@ -53,7 +53,7 @@ function Services() {
       id: 3,
       title: "Api Pen Testing",
       content:
-        "Our backend development services power the functionality of your web applications, ensuring seamless data flow, security, and efficiency. From building scalable databases to creating robust server-side architecture, we design and implement the hidden systems that make your frontend experience smooth and dynamic. We specialize in developing APIs, integrating third-party services, and creating the core logic that drives your business. Whether you need to manage user data, process payments, or handle complex queries, our backend solutions are tailored to meet the demands of your application.",
+        "Shield your digital assets with our rigorous API penetration testing services. Our expert team meticulously scans your APIs for vulnerabilities, identifying and exploiting weaknesses to prevent potential data breaches and cyberattacks. We employ advanced techniques to assess security risks, offering actionable insights to bolster your API security posture.",
       svg: `<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M30 30V15L45 0H60V15L45 30H30Z" fill="currentColor"/>
 <path d="M30 45V30H15L30 15L15 0H0V30H15L0 45V60H15L30 45Z" fill="currentColor"/>
@@ -65,7 +65,7 @@ function Services() {
       id: 4,
       title: "Mobile Pen Testing ",
       content:
-        "Our backend development services power the functionality of your web applications, ensuring seamless data flow, security, and efficiency. From building scalable databases to creating robust server-side architecture, we design and implement the hidden systems that make your frontend experience smooth and dynamic. We specialize in developing APIs, integrating third-party services, and creating the core logic that drives your business. Whether you need to manage user data, process payments, or handle complex queries, our backend solutions are tailored to meet the demands of your application.",
+        "Protect your mobile applications from cyber threats with our comprehensive penetration testing services. Our experts scrutinize your mobile apps for vulnerabilities, including insecure data storage, weak network communication, and malicious code injection. By identifying and mitigating these risks, we ensure the security and integrity of your mobile applications, safeguarding sensitive user data and brand reputation.",
       svg: `<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M30 0L20 10L10 0H0V10L10 20L0 30L10 40L0 50V60H10L20 50L30 60L40 50L50 60H60V50L50 40L60 30L50 20L60 10V0H50L40 10L30 0ZM40 10L50 20L40 30L50 40L40 50L30 40L20 50L10 40L20 30L10 20L20 10L30 20L40 10Z" fill="currentColor"/>
 </svg>
@@ -75,7 +75,7 @@ function Services() {
       id: 5,
       title: "Website Pen Testing",
       content:
-        "Our backend development services power the functionality of your web applications, ensuring seamless data flow, security, and efficiency. From building scalable databases to creating robust server-side architecture, we design and implement the hidden systems that make your frontend experience smooth and dynamic. We specialize in developing APIs, integrating third-party services, and creating the core logic that drives your business. Whether you need to manage user data, process payments, or handle complex queries, our backend solutions are tailored to meet the demands of your application.",
+        "Safeguard your web applications from cyberattacks with our advanced penetration testing services. Our skilled team meticulously scans your web applications for vulnerabilities, including SQL injection, cross-site scripting (XSS), and other common threats. By identifying and addressing these vulnerabilities, we help you protect your web applications from unauthorized access, data breaches, and reputational damage.",
       svg: `<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M45 15H60V0H45L30 15V0H15L0 15V30H15V45H0V60H15L30 45V60H45L60 45V30H45V15ZM30 30V15H15V30H30ZM30 30H45V45H30V30Z" fill="currentColor"/>
 </svg>
@@ -84,7 +84,7 @@ function Services() {
   ];
 
   return (
-    <div className="pt-20">
+    <div className="sm:pt-20 pt-10" id="services">
       <SectionHeading
         heading={"services"}
         subheading={"what we do"}
@@ -94,32 +94,32 @@ function Services() {
         rowReverse={false}
       />
 
-      <div className="relative flex flex-col gap-10 mt-10">
+      <div className="relative flex flex-col sm:gap-10 gap-5 sm:mt-10 mt-5">
         {services.map((service) => (
           <div
             key={service.id}
-            className="flex group items-center gap-10 relative w-fit"
+            className="flex group items-center sm:gap-10 gap-3 relative w-fit"
             onMouseEnter={() => setHoveredService(service.id)} // Set hovered service
             onMouseLeave={() => setHoveredService(null)} // Reset on hover out
           >
             {/* Left Icon */}
-            <div className="service-left flex items-start gap-5">
+            <div className="service-left flex items-start sm:gap-5 gap-3">
               <div
-                className="text-[#CCCCCC] transition-all duration-300 group-hover:text-[#064281]"
+                className="text-[#CCCCCC] transition-all duration-300 group-hover:text-[#064281] hidden sm:flex"
                 dangerouslySetInnerHTML={{ __html: service.svg }}
               ></div>
 
-              <h5 className="text-[40px] text-[#CCCCCC] leading-none font-regular group-hover:text-[#064281] transition-all duration-300">
+              <h5 className="sm:text-[40px] text-[25px] text-[#CCCCCC] leading-none font-regular group-hover:text-[#064281] transition-all duration-300">
                 0{service.id}
               </h5>
             </div>
 
             {/* Right Title */}
-            <div className="service-right flex items-end justify-between w-[40vw] border-b-2 border-b-[#CCCCCC] group-hover:border-b-2 group-hover:border-b-[#064281] pb-8">
-              <h2 className="text-[50px] font-semibold text-[#CCCCCC] group-hover:text-[#064281] transition-all duration-300">
+            <div className="service-right flex items-end justify-between sm:w-[40vw] sm:border-b-2 sm:border-b-[#CCCCCC] group-hover:border-b-2 group-hover:border-b-[#064281] sm:pb-8 pb-0 w-100vw] border-none">
+              <h2 className="sm:text-[50px] text-[25px] font-semibold text-[#CCCCCC] group-hover:text-[#064281] transition-all duration-300">
                 {service.title}
               </h2>
-              <div className="text-[#CCCCCC] group-hover:text-[#064281] transition-all duration-300 group-hover:rotate-45">
+              <div className="text-[#CCCCCC] group-hover:text-[#064281] transition-all duration-300 group-hover:rotate-45 sm:flex hidden">
                 <svg
                   width="29"
                   height="30"
@@ -139,7 +139,7 @@ function Services() {
             {/* Hover Card */}
             {hoveredService === service.id && (
               <div
-                className={`absolute -right-[420px] -top-[80px] w-[400px] p-5 ${styles.gradientBackground} rounded-xl border-[3px] border-[#0a6ed9] ${styles.animateBorderMotion}`}
+                className={`absolute -right-[420px] -top-[80px] w-[400px] p-5 ${styles.gradientBackground} rounded-xl border-[3px] border-[#0a6ed9] ${styles.animateBorderMotion} sm:flex hidden`}
               >
                 {/* Glowing effect div */}
                 <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#064281] to-[#0a6ed9] blur-2xl opacity-50 rounded-xl"></div>

@@ -160,13 +160,13 @@ function Coursecard({ data }) {
   };
 
   return (
-    <div className="w-[400px] h-[630px] shadow-xl rounded-xl">
-      <div className="w-full h-[45%]">
+    <div className="sm:w-[400px] sm:h-[630px] h-[550px] max-w-[90%] shadow-xl rounded-xl flex-shrink-0 overflow-hidden ml-5 sm:ml-0">
+      <div className="w-full sm:h-[45%] h-[40%]">
         <img src={data.image} alt="" className="w-full h-full" />
       </div>
-      <div className="w-full h-[55%] px-6 py-3">
+      <div className="w-full h-[55%] sm:px-6 py-3 px-3">
         <div className="flex items-center justify-between">
-          <h6 className={`${styles.subHeading} text-[18px] font-semibold`}>
+          <h6 className={`${styles.subHeading} sm:text-[18px] text-[12px] font-semibold`}>
             {data.category}
           </h6>
           <div className="flex gap-1 items-center">
@@ -181,19 +181,19 @@ function Coursecard({ data }) {
             />
           </div>
         </div>
-        <div className="flex items-center justify-between mt-3">
+        <div className="flex items-center justify-between sm:mt-3 mt-2">
           <h3 className="text-[24px] font-medium">{data.courseName}</h3>
           <HiOutlineArrowSmallUp size={30} className="rotate-45" />
         </div>
-        <p className="text-[16px] text-[#667085] mt-3">{data.courseInfo}</p>
-        <div className="flex flex-col justify-between h-[170px]">
+        <p className="sm:text-[16px] text-[13px] text-[#667085] sm:mt-3 mt-1">{data.courseInfo}</p>
+        <div className="flex flex-col justify-between sm:h-[170px] h-[185px]">
           <div className="flex justify-start gap-3 mt-3 flex-wrap">
             {data.skills.map((skill, index) => {
               const { bgColor, textColor } = getRandomColor();
               return (
                 <div
                   key={index}
-                  className="px-4 py-1 text-[16px] font-medium rounded-[8px]"
+                  className="sm:px-4 px-2 py-1 sm:text-[16px] text-[14px] font-medium rounded-[8px]"
                   style={{ backgroundColor: bgColor, color: textColor }}
                 >
                   {skill}

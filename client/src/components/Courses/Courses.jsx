@@ -1,6 +1,7 @@
 import React from 'react'
 import SectionHeading from '../SectionHeading/SectionHeading';
 import Coursecard from '../CourseCard/Coursecard';
+import styles from './Courses.module.css'
 
 function Courses() {
   const courseData = [
@@ -33,7 +34,7 @@ function Courses() {
     },
   ];
   return (
-    <div className="pb-28">
+    <div className="sm:pb-28 pb-10" id='courses'>
       <SectionHeading
         heading={"Courses"}
         subheading={"Explore Programmes"}
@@ -42,13 +43,15 @@ function Courses() {
         }
         rowReverse={true}
       />
-      <div className="flex justify-evenly">
+      <div className={`flex justify-start sm:justify-evenly sm:gap-7 overflow-x-auto sm:overflow-none py-4 ${styles.coursesContainer}`}>
         {courseData.map((data, index) => (
           <Coursecard data={data} />
         ))}
       </div>
       <div className="flex mt-10 justify-center">
-        <div className="px-8 py-2.5 bg-[#0A0A0A] text-white text-[20px] rounded-full">Explore All Courses</div>
+        <div className="px-8 py-2.5 bg-[#0A0A0A] text-white text-[20px] rounded-full">
+          Explore All Courses
+        </div>
       </div>
     </div>
   );

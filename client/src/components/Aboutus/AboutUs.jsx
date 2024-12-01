@@ -3,9 +3,9 @@ import SectionHeading from "../SectionHeading/SectionHeading";
 import styles from "./AboutUs.module.css";
 import Button from "../Button/Button";
 
-function AboutUs() {
+const AboutUs =React.forwardRef(({ref}) =>{
   return (
-    <div className="py-28">
+    <div className="sm:py-28 py-10" ref={ref} id="about">
       <SectionHeading
         heading={"About Us"}
         subheading={"who we are"}
@@ -14,41 +14,41 @@ function AboutUs() {
         }
         rowReverse={true}
       />
-      <div className="flex justify-between mt-8 h-fit ">
-        <div className="about-left w-[45%] min-h-[65vh] rounded-xl overflow-hidden relative">
+      <div className="flex justify-between sm:mt-8 mt-4 h-fit flex-wrap">
+        <div className="about-left sm:w-[45%] w-full sm:min-h-[65vh] h-[30vh] rounded-xl overflow-hidden relative">
           <img
             src="/images/aboutus-img.jpg"
             alt=""
             className="object-cover w-full h-full"
           />
         </div>
-        <div className="about-right w-[50%] flex flex-col justify-between">
-          <p className="text-[17px]">
-            EU Care Upskill was founded with a clear vision: to make
-            high-quality, affordable education accessible to learners worldwide,
-            empowering them to achieve their personal and professional goals. In
-            a rapidly changing world, continuous learning is essential, and
-            we’re here to bridge the gap between ambition and opportunity. Our
-            platform offers a diverse range of courses, from foundational skills
-            to advanced specializations, all crafted by industry experts and
-            experienced educators. With a focus on engaging, interactive content
-            and flexible learning paths, we ensure that every learner, whether a
-            student, working professional, or lifelong learner, can find what
-            they need to thrive. We believe education should be both impactful
-            and inclusive, which is why we are committed to fostering a
-            supportive, global community where learners can connect, share, and
-            grow together. At EU Care Upskill we don’t just teach — we partner
-            with you on a journey of discovery, growth, and success. Join us and
-            unlock your potential in an environment designed for learning,
-            growth, and achievement.
+        <div className="about-right sm:w-[50%] w-full flex flex-col justify-between mt-4 text-justify">
+          <p className="sm:text-[17px] text-[12px]">
+            BreachBlock Co. is your trusted partner in securing and enhancing
+            your digital presence. With a team of seasoned experts, we provide
+            comprehensive web application development and robust penetration
+            testing services tailored to your specific needs. Our expertise
+            extends to safeguarding web applications, mobile applications, and
+            networks, ensuring the highest level of security for your digital
+            assets. Our Services: Web Application Development: Crafting
+            innovative and secure web applications Leveraging cutting-edge
+            technologies and industry best practices Ensuring optimal
+            performance and user experience Penetration Testing: Rigorous
+            testing of web, mobile, and network applications Identification and
+            exploitation of vulnerabilities Providing actionable insights to
+            mitigate risks Cybersecurity Training: Empowering individuals and
+            organizations with essential cybersecurity knowledge Offering valued
+            certified course preparation to advance your career Located in
+            Vadodara, Gujarat, BreachBlock Co. is committed to delivering
+            exceptional services and fostering a secure digital future.
           </p>
-          <div className="flex items-center justify-between">
-            <h6 className="capitalize text-[18px] font-semibold orbitron-family">
+          <div className="flex items-center justify-between mt-3">
+            <h6 className="capitalize sm:text-[18px] text-[14px] font-semibold orbitron-family">
               empowering{" "}
               <span className={`${styles.subHeading}`}>learning,</span>{" "}
               inspiring <span className={`${styles.subHeading}`}>growth</span>
             </h6>
-            <div className="flex gap-3">
+            <div className="sm:flex gap-3 hidden">
               <Button btntext={"Read More"} color={"#000"} fs={"16px"} />
               <div className="w-[40px] h-[40px] rounded-full border-[1px] border-black flex justify-center items-center text-black">
                 <img
@@ -63,6 +63,6 @@ function AboutUs() {
       </div>
     </div>
   );
-}
+});
 
 export default AboutUs;

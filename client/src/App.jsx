@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Header from "./components/Header/Header";
 import Herosection from "./components/Herosection/Herosection";
 import Services from "./components/Services/Services";
@@ -10,15 +10,15 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <div className="container mx-auto min-h-screen">
+    <div className="mx-auto min-h-screen px-4 sm:px-24 lg:px-16">
       <Header />
       <Herosection />
       <Services />
       <AboutUs />
       <Technologies />
-      <Courses/>
-      <Contactus/>
-      <Footer/>
+      <Courses />
+      <Contactus />
+      <Footer />
     </div>
   );
 }
