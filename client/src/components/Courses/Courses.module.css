@@ -1,0 +1,3 @@
+.coursesContainer::-webkit-scrollbar{
+    display: none;
+}

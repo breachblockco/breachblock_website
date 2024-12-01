@@ -1,0 +1,41 @@
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_386_929)">
+<path d="M190 142V160L160 130H178L190 142Z" fill="url(#paint0_linear_386_929)"/>
+<path d="M160 190L190 160V178L178 190H160Z" fill="url(#paint1_linear_386_929)"/>
+<path d="M130 160L160 190H142L130 178V160Z" fill="url(#paint2_linear_386_929)"/>
+<path d="M130 160V142L142 130H160L130 160Z" fill="url(#paint3_linear_386_929)"/>
+<path d="M145 160L160 145L175 160L160 175L145 160Z" fill="url(#paint4_linear_386_929)"/>
+</g>
+<defs>
+<filter id="filter0_d_386_929" x="0" y="0" width="320" height="320" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="65"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0392157 0 0 0 0 0.431373 0 0 0 0 0.85098 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_386_929"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_386_929" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_386_929" x1="130" y1="130" x2="190" y2="190" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0A6ED9"/>
+<stop offset="1" stop-color="#064281"/>
+</linearGradient>
+<linearGradient id="paint1_linear_386_929" x1="130" y1="130" x2="190" y2="190" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0A6ED9"/>
+<stop offset="1" stop-color="#064281"/>
+</linearGradient>
+<linearGradient id="paint2_linear_386_929" x1="130" y1="130" x2="190" y2="190" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0A6ED9"/>
+<stop offset="1" stop-color="#064281"/>
+</linearGradient>
+<linearGradient id="paint3_linear_386_929" x1="130" y1="130" x2="190" y2="190" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0A6ED9"/>
+<stop offset="1" stop-color="#064281"/>
+</linearGradient>
+<linearGradient id="paint4_linear_386_929" x1="130" y1="130" x2="190" y2="190" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0A6ED9"/>
+<stop offset="1" stop-color="#064281"/>
+</linearGradient>
+</defs>
+</svg>

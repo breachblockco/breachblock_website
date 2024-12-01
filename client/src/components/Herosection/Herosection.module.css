@@ -1,0 +1,22 @@
+/* Apply 3D perspective */
+.container {
+  perspective: 1000px; /* Controls the depth of the 3D effect */
+  display: inline-block;
+}
+
+.image {
+  width: 300px; /* Adjust the image size */
+  height: 300px; /* Adjust the image size */
+  transform-style: preserve-3d; /* Necessary for 3D transformations */
+  /* animation: rotate 5s infinite linear;  */
+}
+
+/* Keyframes for infinite rotation */
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg); /* Start position */
+  }
+  100% {
+    transform: rotateY(360deg); /* End position (360 degrees) */
+  }
+}
