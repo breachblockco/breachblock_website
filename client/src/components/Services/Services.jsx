@@ -63,7 +63,7 @@ function Services() {
     },
     {
       id: 4,
-      title: "Mobile Pen Testing ",
+      title: "Mobile Application Pentesting",
       content:
         "Protect your mobile applications from cyber threats with our comprehensive penetration testing services. Our experts scrutinize your mobile apps for vulnerabilities, including insecure data storage, weak network communication, and malicious code injection. By identifying and mitigating these risks, we ensure the security and integrity of your mobile applications, safeguarding sensitive user data and brand reputation.",
       svg: `<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +73,7 @@ function Services() {
     },
     {
       id: 5,
-      title: "Website Pen Testing",
+      title: "Web Application Pen Testing",
       content:
         "Safeguard your web applications from cyberattacks with our advanced penetration testing services. Our skilled team meticulously scans your web applications for vulnerabilities, including SQL injection, cross-site scripting (XSS), and other common threats. By identifying and addressing these vulnerabilities, we help you protect your web applications from unauthorized access, data breaches, and reputational damage.",
       svg: `<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +115,7 @@ function Services() {
             </div>
 
             {/* Right Title */}
-            <div className="service-right flex items-end justify-between sm:w-[40vw] sm:border-b-2 sm:border-b-[#CCCCCC] group-hover:border-b-2 group-hover:border-b-[#064281] sm:pb-8 pb-0 w-100vw] border-none">
+            <div className="service-right flex items-end justify-between sm:w-[55vw] sm:border-b-2 sm:border-b-[#CCCCCC] group-hover:border-b-2 group-hover:border-b-[#064281] sm:pb-8 pb-0 w-100vw] border-none">
               <h2 className="sm:text-[50px] text-[25px] font-semibold text-[#CCCCCC] group-hover:text-[#064281] transition-all duration-300">
                 {service.title}
               </h2>
