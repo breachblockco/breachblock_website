@@ -7,17 +7,23 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { IoLocationSharp } from "react-icons/io5";
+import { FaPhone } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 
 function Footer() {
+  const scrollToSection = (ref) => {
+    document.getElementById(ref).scrollIntoView({ behavior: "smooth" });
+  };
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [isServicesCollapsed, setIsServicesCollapsed] = useState(true);
 
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
-   const toggleServicesCollapse = () => {
-     setIsServicesCollapsed(!isServicesCollapsed);
-   };
+  const toggleServicesCollapse = () => {
+    setIsServicesCollapsed(!isServicesCollapsed);
+  };
   return (
     <div className="w-full">
       <div className="w-full sm:py-20 py-10 bg-[#100A12] sm:px-24">
@@ -42,27 +48,24 @@ function Footer() {
         </div>
         <div className="sm:pt-14 sm:px-10 pt-7 px-5 flex-wrap flex sm:gap-28 gap-8 justify-between border-b-[1px] border-[#8D8D8D] pb-12">
           <div className="sm:w-[30%] w-full flex flex-col sm:gap-20 gap-10">
-            <div className="text-white">
-              <h5 className="text-[20px] font-semibold">
-                Unlock your potential with expert-led, flexible online courses
-                designed for career growth.
-              </h5>
-              <p className="text-[#BCBCBD] text-[16px] mt-6">
-                Join us today and start your journey toward lifelong learning
-                and career advancement.
-              </p>
-            </div>
-            <div className="text-white">
-              <div className="sm:px-5 w-full sm:py-3 px-3 py-2 rounded-full bg-[#FFFFFF] flex items-center gap-3 relative">
-                <IoSearchOutline className="text-[#BCBCBD]" size={24} />
-                <input
-                  type="text"
-                  placeholder="Type in you Email"
-                  className=" placeholder:text-[#a1a1a4] sm:w-[65%] w-[65%] text-black outline-none"
-                />
-                <div className="sm:py-3 sm:px-8 py-2 px-5 bg-gradient-to-r from-[#0A6ED9] to-[#064281] rounded-full absolute right-0 font-semibold">
-                  Send
-                </div>
+            <div className="text-white flex flex-col gap-6 sm:gap-10">
+              <div className="flex items-start gap-4">
+                <IoLocationSharp size={20} />
+                <h5 className="text-[18px] sm:text-[20px] font-semibold flex-shrink-0 leading-none">
+                  Akshar Samrajya, Halol, Gujarat.
+                </h5>
+              </div>
+              <div className="flex items-start gap-4">
+                <FaPhone size={20} />
+                <h5 className="text-[18px] sm:text-[20px] font-semibold flex-shrink-0 leading-none">
+                  +919429882924 | +919157322116
+                </h5>
+              </div>
+              <div className="flex items-center gap-4">
+                <MdEmail size={25} />
+                <h5 className="text-[18px] sm:text-[20px] font-semibold flex-shrink-0 leading-none">
+                  info@breachblockco.in
+                </h5>
               </div>
             </div>
           </div>
@@ -98,12 +101,15 @@ function Footer() {
                 isCollapsed ? "max-h-0 overflow-hidden" : "max-h-screen"
               }`}
             >
-              <div className="flex flex-col gap-3 mt-4 text-white">
-                <p>Front End Development</p>
-                <p>Backend Development</p>
-                <p>Mobile Pen Testing</p>
-                <p>API Pen Testing</p>
-                <p>Website Pen Testing</p>
+              <div className="flex flex-col gap-3 mt-4 text-white items-start">
+                <button onClick={() => scrollToSection("main")}>Home</button>
+                <button>My Learnings</button>
+                <button onClick={() => scrollToSection("courses")}>
+                  All Courses
+                </button>
+                <button onClick={() => scrollToSection("about")}>
+                  About Us
+                </button>
               </div>
             </div>
           </div>
@@ -142,9 +148,9 @@ function Footer() {
               <div className="flex flex-col gap-3 mt-4 text-white">
                 <p>Front End Development</p>
                 <p>Backend Development</p>
-                <p>Mobile Pen Testing</p>
+                <p>Mobile Application Pentesting</p>
                 <p>API Pen Testing</p>
-                <p>Website Pen Testing</p>
+                <p>Web Application Pen Testing</p>
               </div>
             </div>
           </div>
