@@ -1,7 +1,31 @@
-import React from "react";
-import styles from "./Contactus.module.css";
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
 
 function Contactus() {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_zscf9u2", // Replace with your EmailJS Service ID
+        "breachblockco_template",
+        form.current,
+        "ROF_f_l8nYxFGbL4w" // Replace with your EmailJS User ID (or public key)
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message Sent Successfully!");
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Failed to send message. Please try again later.");
+        }
+      );
+
+    e.target.reset(); // Reset the form after submission
+  };
   return (
     <div className="sm:px-0" id="contact">
       <h2 className="text-[#100A12] sm:text-[130px] text-[35px] font-semibold orbitron-family text-center leading-none">
@@ -37,7 +61,8 @@ function Contactus() {
             Have a Question on Mind?
           </h4>
           <form
-            action=""
+            ref={form}
+            onSubmit={sendEmail}
             className="w-full flex flex-col sm:gap-5 gap-3 sm:mt-10 mt-5 flex-wrap"
           >
             <div className="flex sm:gap-5 gap-3 flex-wrap sm:flex-nowrap">
