@@ -97,9 +97,18 @@ function CourseDetail() {
                 Only <span className="text-[#096CD5]">₹4999</span>
               </h4>
             </div>
-            <div className="px-8 py-4 bg-[#096CD5] mt-10 w-fit text-xl rounded-lg font-semibold text-white">
+            <button
+              className="px-8 py-4 bg-[#096CD5] mt-10 w-fit text-xl rounded-lg font-semibold text-white"
+              onClick={() =>
+                window.open(
+                  "https://docs.google.com/forms/d/1BQVUuBA_XubASDjM-L0M4-7m_VSjEJHGAsjC3XhhwMk/edit",
+                  "_blank"
+                )
+              }
+            >
               Buy Now - Start Learning
-            </div>
+            </button>
+
             <p className="mt-8 text-lg">{storedCourse.courseInfo}</p>
           </div>
           <div className="w-[45%] h-full">
