@@ -19,7 +19,7 @@ function Courses() {
         }
         rowReverse={true}
       />
-      {/* <div
+      <div
         className={`flex justify-start w-full sm:justify-center sm:gap-8 overflow-x-auto sm:overflow-none py-4 ${styles.coursesContainer}`}
       >
         {courses.slice(0, 3).map((data, index) => (
@@ -27,7 +27,7 @@ function Courses() {
             <Coursecard data={data} />
           </Link> 
         ))}
-      </div> */}
+      </div>
       <div className="flex mt-10 justify-center">
         <Link
           to={"/courses"}
