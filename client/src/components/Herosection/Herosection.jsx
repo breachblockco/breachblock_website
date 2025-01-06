@@ -8,13 +8,13 @@ function Herosection() {
   };
   return (
     <div
-      className="w-full sm:mt-28 mt-2 grid sm:grid-cols-[60%_40%] lg:grid-cols-[60%_40%] grid-cols-1 h-fit items-center gap-0"
+      className="w-full sm:mt-28 mt-2 grid sm:grid-cols-[55%_45%] lg:grid-cols-[55%_45%] grid-cols-1 h-fit items-center gap-0 px-4 sm:px-24 lg:px-16"
       id="main"
     >
       {/* Left Part */}
-      <div className="flex-1 sm:min-h-52 pb-6 w-full flex-shrink-0">
+      <div className="flex-1 sm:min-h-52 pb-6 w-full flex-shrink-0 items-center">
         <div className="main-heading w-full">
-          <h1 className="orbitron-family sm:text-[52px] text-[23px] font-bold leading-[130%]">
+          <h1 className="orbitron-family sm:text-[48px] text-[23px] font-bold leading-[130%]">
             Your security, our priority. <br /> Your success, our mission.
           </h1>
           <p className="sm:mt-6 mt-4 sm:text-2xl text-[14px] poppins-family text-justify font-medium">
@@ -70,7 +70,7 @@ function Herosection() {
 
       {/* Right Part */}
       <div className="flex-1 flex justify-center sm:justify-end items-center w-full flex-shrink-0">
-        <div className="relative w-[90%] sm:h-[50vh] h-[40vh]">
+        <div className="relative w-[90%] sm:h-[60vh] h-[40vh]">
           <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500 to-[#096cd5] sm:blur-xl blur-md opacity-75 aspect-w-16 aspect-h-9"></div>
           <img
             src="/images/hero-img.jpg"

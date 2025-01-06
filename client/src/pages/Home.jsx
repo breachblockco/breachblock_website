@@ -10,7 +10,7 @@ import Footer from '../components/Footer/Footer';
 
 function Home() {
   return (
-    <div className="mx-auto min-h-screen px-4 sm:px-24 lg:px-16">
+    <div className="mx-auto min-h-screen">
       <Header />
       <Herosection />
       <Services />
