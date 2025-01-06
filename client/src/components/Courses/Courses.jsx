@@ -19,15 +19,15 @@ function Courses() {
         }
         rowReverse={true}
       />
-      <div
-        className={`flex justify-start sm:justify-center sm:gap-10 overflow-x-auto sm:overflow-none py-4 ${styles.coursesContainer}`}
+      {/* <div
+        className={`flex justify-start w-full sm:justify-center sm:gap-8 overflow-x-auto sm:overflow-none py-4 ${styles.coursesContainer}`}
       >
-        {courses.slice(0, 2).map((data, index) => (
+        {courses.slice(0, 3).map((data, index) => (
           <Link to={`/courses/${data.id}`} key={index}>
             <Coursecard data={data} />
           </Link> 
         ))}
-      </div>
+      </div> */}
       <div className="flex mt-10 justify-center">
         <Link
           to={"/courses"}

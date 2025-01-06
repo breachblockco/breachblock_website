@@ -78,28 +78,28 @@ function Coursecard({ data }) {
   };
 
   return (
-    <div className="sm:w-[480px] sm:h-[670px] h-[550px] max-w-[90%] shadow-lg rounded-xl flex-shrink-0 overflow-hidden ml-5 sm:ml-0">
+    <div className="w-[340px] sm:w-[450px] sm:h-[670px] h-[550px] shadow-lg rounded-xl flex-shrink-0 overflow-hidden sm:ml-0">
       <div className="w-full sm:h-[45%] h-[40%]">
         <img src={data.image} alt="" className="w-full h-full rounded-[20px]" />
       </div>
       <div className="w-full h-[55%] sm:px-6 py-3 px-3">
         <div className="flex items-center justify-between">
           <h6
-            className={`${styles.subHeading} sm:text-[18px] text-[12px] font-semibold`}
+            className={`${styles.subHeading} sm:text-[18px] text-[14px] font-semibold`}
           >
             {data.category}
           </h6>
         </div>
-        <div className="flex items-center justify-between sm:mt-3 mt-2">
-          <h3 className="text-[28px] font-medium w-2/3 leading-[32px]">
+        <div className="flex items-center justify-between mt-3">
+          <h3 className="text-[20px] sm:text-[28px] font-medium w-2/3 leading-[26px] sm:leading-[32px]">
             {data.courseName}
           </h3>
           <HiOutlineArrowSmallUp size={30} className="rotate-45" />
         </div>
-        <p className="sm:text-[16px] text-[13px] text-[#667085] sm:mt-3 mt-1">
+        <p className="sm:text-[16px] text-[14px] text-[#667085] sm:mt-3 mt-2">
           {data.courseInfo}
         </p>
-        <div className="flex flex-col justify-between sm:h-[170px] h-[185px]">
+        <div className="flex flex-col justify-between sm:h-[170px] h-[145px]">
           <div className="flex justify-start gap-3 mt-3 flex-wrap">
             {data.skills.map((skill, index) => {
               const { bgColor, textColor } = getRandomColor();

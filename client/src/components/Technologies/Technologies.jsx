@@ -34,7 +34,7 @@ function Technologies() {
   ];
 
   return (
-    <div className="sm:pb-28 pb-10" id="technology">
+    <div className="sm:pb-28 pb-10 px-4 sm:px-24 lg:px-16" id="technology">
       <SectionHeading
         heading={"Technologies"}
         subheading={"Our Technologies"}
