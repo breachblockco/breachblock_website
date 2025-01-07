@@ -84,7 +84,7 @@ function Services() {
   ];
 
   return (
-    <div className="sm:pt-20 pt-10" id="services">
+    <div className="sm:pt-20 pt-10 px-4 sm:px-24 lg:px-16" id="services">
       <SectionHeading
         heading={"services"}
         subheading={"what we do"}

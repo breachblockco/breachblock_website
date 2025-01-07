@@ -24,7 +24,7 @@ function Header() {
   };
 
   return (
-    <div className="w-full sm:fixed sm:top-0 sm:left-0 sm:bg-white/20 sm:backdrop-blur-md sm:z-50 sm:px-16">
+    <div className="w-full sm:fixed sm:top-0 sm:left-0 sm:bg-white/20 sm:backdrop-blur-md sm:z-50 px-4 sm:px-24 lg:px-16">
       <div className="mx-auto flex h-[8vh] items-center flex-row-reverse sm:flex-row justify-between">
         {/* Hamburger Menu for Mobile */}
         <div className="md:hidden bg-gray-400/10 backdrop-blur-md rounded-md">
@@ -34,19 +34,19 @@ function Header() {
         </div>
 
         {/* Navigation Links (hidden on small screens) */}
-        <div className="hidden md:flex items-center gap-8 lg:gap-6">
+        <div className="hidden md:flex items-center gap-8 lg:gap-10">
           <button
             className="text-[14px] poppins-family uppercase font-medium"
             onClick={() => scrollToSection("main")}
           >
             Home
           </button>
-          <button
+          <Link
             className="text-[14px] poppins-family uppercase font-medium"
-            onClick={() => scrollToSection("courses")}
+            to={"/courses"}
           >
             All Courses
-          </button>
+          </Link>
           <button
             className="text-[14px] poppins-family uppercase font-medium"
             onClick={() => scrollToSection("services")}
@@ -59,21 +59,15 @@ function Header() {
           >
             About
           </button>
-          <button
-            className="text-[14px] poppins-family uppercase font-medium"
-            onClick={() => scrollToSection("technology")}
-          >
-            Techstack
-          </button>
         </div>
 
         {/* Logo */}
-        <div className="logo w-[50%] md:w-[15%] flex justify-center">
+        <Link className="logo w-[50%] md:w-[15%] flex justify-center" to={"/"}>
           <img src="/images/logo.png" alt="Logo" />
-        </div>
+        </Link>
 
         {/* Right Section */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-10">
           <Link
             to="/learnings"
             className="text-[14px] poppins-family uppercase font-medium"
@@ -127,12 +121,7 @@ function Header() {
           >
             About
           </button>
-          <button
-            onClick={() => scrollToSection("technology")}
-            className="text-[14px] poppins-family uppercase font-medium text-left"
-          >
-            Techstack
-          </button>
+
           <Link
             to="/learnings"
             className="text-[14px] poppins-family uppercase font-medium leading-none"
