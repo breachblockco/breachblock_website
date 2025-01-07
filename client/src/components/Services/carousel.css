@@ -1,0 +1,50 @@
+.service-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px !important;
+}
+
+.service-card-container {
+  width: 100% !important;
+  height: 120% !important;
+  display: flex !important;
+  /* align-items: center !important; */
+}
+
+.service-card {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.6;
+  width: 85% !important;
+  height: 300px !important;
+  margin-block: 70px !important;
+}
+
+.slick-center .service-card {
+  transform: scale(1.2);
+  opacity: 1; /* Makes the centered card fully visible */
+  transform-origin: center;
+  background-color: #100a12;
+}
+
+.slick-center .service-card h3 {
+  color: white !important;
+  font-weight: 700 !important;
+}
+
+.slick-center .service-card p {
+  color: white !important;
+}
+
+.slick-slide {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+@media(max-width:600px){
+    .service-card{
+        margin-block: 40px !important;
+    }
+    .slick-center .service-card{
+        transform: scale(1.1);
+    }
+}

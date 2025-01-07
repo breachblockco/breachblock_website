@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 
 const AboutUs =React.forwardRef(({ref}) =>{
   return (
-    <div className="sm:py-28 py-10 px-4 sm:px-24 lg:px-16" ref={ref} id="about">
+    <div className="sm:pb-28 sm:pt-40 py-10 px-4 sm:px-24 lg:px-16 mt-44" ref={ref} id="about">
       <SectionHeading
         heading={"About Us"}
         subheading={"who we are"}
