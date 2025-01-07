@@ -61,10 +61,10 @@ function Contactus() {
             Have a Question on Mind?
           </h4>
           <form
-            ref={form}
-            onSubmit={sendEmail}
-            className="w-full flex flex-col sm:gap-5 gap-3 sm:mt-10 mt-5 flex-wrap"
-          >
+ref={form}
+onSubmit={sendEmail}
+className="w-full flex flex-col sm:gap-5 gap-3 sm:mt-10 mt-5 flex-wrap"
+>
             <div className="flex sm:gap-5 gap-3 flex-wrap sm:flex-nowrap">
               <div className="sm:w-1/2 w-full sm:px-4 px-3 sm:py-5 py-3 bg-[#FFFFFF0D] rounded-md border-[1px] border-[#FFFFFF1A]">
                 <input
