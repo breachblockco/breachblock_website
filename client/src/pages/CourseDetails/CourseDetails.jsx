@@ -73,7 +73,7 @@ function CourseDetail() {
       <Header />
 
       {storedCourse && (
-        <div className="sm:my-24 w-full h-[90vh] sm:h-[60vh] sm:flex sm:justify-between px-4 sm:px-24 lg:px-16 mt-5 flex-col-reverse flex gap-6">
+        <div className="sm:my-24 w-full h-[90vh] sm:h-[60vh] sm:flex sm:justify-between px-4 sm:px-24 lg:px-16 mt-5 flex-col-reverse flex gap-6 sm:flex-row">
           <div className="w-[100%] sm:w-[45%] h-full">
             <h1 className="sm:text-6xl text-2xl font-medium">
               {storedCourse.courseName}
