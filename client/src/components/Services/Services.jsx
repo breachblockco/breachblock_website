@@ -173,7 +173,10 @@ function Services() {
     //   </div>
     // </div>
 
-    <div className="slider-container pt-20 h-[60vh] w-full px-4 sm:px-24 lg:px-16 sm:mb-28">
+    <div
+      className="slider-container pt-20 h-[60vh] w-full px-4 sm:px-24 lg:px-16 sm:mb-28"
+      id="services"
+    >
       <SectionHeading
         heading={"services"}
         subheading={"what we do"}
@@ -192,7 +195,11 @@ function Services() {
             >
               {/* Card Icon */}
               <div className="icon-container bg-blue-400 w-14 h-14 mb-4 font-semibold">
-                <img src={service.image} alt="" className="w-full h-full bg-transparent"/>
+                <img
+                  src={service.image}
+                  alt=""
+                  className="w-full h-full bg-transparent"
+                />
               </div>
               {/* Card Title */}
               <h3 className="sm:text-lg text-md font-semibold text-gray-800 mb-2 text-center">
@@ -200,8 +207,8 @@ function Services() {
               </h3>
               {/* Card Description */}
               <p className="sm:text-sm text-xs text-gray-600 text-center">
-                Explore our {service.content} to help boost your business growth and
-                enhance user engagement.
+                Explore our {service.content} to help boost your business growth
+                and enhance user engagement.
               </p>
             </div>
           </div>
