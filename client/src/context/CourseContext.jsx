@@ -6,7 +6,7 @@ export const CourseContext = createContext();
 export const CourseProvider = ({ children }) => {
   const [courses, setCourses] = useState([
     {
-      id: uuidv4(),
+      id: "wapt",
       image: "/images/c1.jpg",
       category: "Cyber Security",
       rating: 3,
