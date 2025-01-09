@@ -17,12 +17,12 @@ function AllServices() {
         >
           All Services
         </h2>
-        <div className="w-full flex-wrap flex justify-center">
+        <div className="w-full flex-wrap flex justify-center sm:gap-8 gap-5">
           {serviceDetails.map((data, index) => (
             <Link
               to={`/services/${data.id}`}
               key={index}
-              className="w-full"
+              className="w-full sm:w-fit"
             >
               <ServiceCard data={data} />
             </Link>
