@@ -47,12 +47,12 @@ function Header() {
           >
             All Courses
           </Link>
-          <button
+          <Link
+            to={"/services"}
             className="text-[14px] poppins-family uppercase font-medium"
-            onClick={() => scrollToSection("services")}
           >
             Services
-          </button>
+          </Link>
           <button
             className="text-[14px] poppins-family uppercase font-medium"
             onClick={() => scrollToSection("about")}
