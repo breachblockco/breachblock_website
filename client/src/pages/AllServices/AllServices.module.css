@@ -1,0 +1,5 @@
+.subHeading {
+  background: linear-gradient(90deg, #0a6ed9 0%, #064281 100%);
+  -webkit-background-clip: text; /* Clips the background to the text */
+  -webkit-text-fill-color: transparent; /* Makes the text transparent, showing the gradient */
+}
