@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import AllCourses from "./pages/AllCourses/AllCourses";
 import Home from "./pages/Home";
 import CourseDetails from "./pages/CourseDetails/CourseDetails";
+import ServiceDetails from "./pages/ServiceDetails/ServiceDetails";
 
 function App() { 
   return (
@@ -10,6 +11,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/courses" element={<AllCourses />} />
       <Route path="/courses/:id" element={<CourseDetails />} />
+      <Route path="/services/:serviceid" element={<ServiceDetails />} />
     </Routes>
   );
 }
