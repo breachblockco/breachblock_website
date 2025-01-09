@@ -2,10 +2,7 @@ import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import { IoMenu } from "react-icons/io5";
-import {
-  Drawer,
-  IconButton,
-} from "@mui/material";
+import { Drawer, IconButton } from "@mui/material";
 
 function Header() {
   const scrollToSection = (ref) => {
@@ -104,17 +101,17 @@ function Header() {
             Home
           </button>
           <button
-            onClick={() => scrollToSection("courses")}
+            to={"/courses"}
             className="text-[14px] poppins-family uppercase font-medium text-left"
           >
             All Courses
           </button>
-          <button
-            onClick={() => scrollToSection("services")}
+          <Link
+            to={"/services"}
             className="text-[14px] poppins-family uppercase font-medium text-left"
           >
             Services
-          </button>
+          </Link>
           <button
             onClick={() => scrollToSection("about")}
             className="text-[14px] poppins-family uppercase font-medium text-left"
@@ -142,4 +139,3 @@ function Header() {
 }
 
 export default Header;
-
