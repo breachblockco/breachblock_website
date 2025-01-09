@@ -83,7 +83,7 @@ function ServiceDetails() {
               {storedService.technologies.map((t, i) => (
                 <div
                   key={i}
-                  className="flex items-center justify-center bg-[#100A12] text-white rounded-2xl shadow-lg w-40 h-16 sm:w-60 sm:h-20 hover:shadow-2xl hover:scale-110 sm:hover:scale-100 transition-all duration-300"
+                  className="flex items-center justify-center bg-[#100A12] text-white rounded-2xl shadow-lg w-40 h-16 sm:w-60 sm:h-20 hover:shadow-2xl hover:scale-100 sm:hover:scale-110 transition-all duration-300"
                 >
                   <h2 className="text-xl sm:text-3xl font-semibold">{t}</h2>
                 </div>
