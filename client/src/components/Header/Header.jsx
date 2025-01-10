@@ -72,12 +72,14 @@ function Header() {
             My Learnings
           </Link>
           <Button btntext={"Login"} icon={true} color={"#000"} fs={"14px"} />
-          <Button
-            btntext={"Let’s Brainstorm"}
-            icon={false}
-            color={"#096cd5"}
-            fs={"14px"}
-          />
+          <Link to={"/contactus"}>
+            <Button
+              btntext={"Let’s Brainstorm"}
+              icon={false}
+              color={"#096cd5"}
+              fs={"14px"}
+            />
+          </Link>
         </div>
       </div>
 
@@ -126,12 +128,14 @@ function Header() {
             My Learnings
           </Link>
           <Button btntext={"Login"} icon={true} color={"#000"} fs={"14px"} />
-          <Button
-            btntext={"Let’s Brainstorm"}
-            icon={false}
-            color={"#096cd5"}
-            fs={"14px"}
-          />
+          <Link to={'/contactus'}>
+            <Button
+              btntext={"Let’s Brainstorm"}
+              icon={false}
+              color={"#096cd5"}
+              fs={"14px"}
+            />
+          </Link>
         </div>
       </Drawer>
     </div>
