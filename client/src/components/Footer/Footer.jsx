@@ -10,6 +10,7 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const scrollToSection = (ref) => {
@@ -102,14 +103,14 @@ function Footer() {
               }`}
             >
               <div className="flex flex-col gap-3 mt-4 text-white items-start">
-                <button onClick={() => scrollToSection("main")}>Home</button>
-                <button>My Learnings</button>
-                <button onClick={() => scrollToSection("courses")}>
+                <Link to={'/'}>Home</Link>
+                <Link to={'/learnings'}>My Learnings</Link>
+                <Link to={'/courses'}>
                   All Courses
-                </button>
-                <button onClick={() => scrollToSection("about")}>
+                </Link>
+                <Link to={'/aboutus'}>
                   About Us
-                </button>
+                </Link>
               </div>
             </div>
           </div>
