@@ -7,6 +7,8 @@ import ServiceDetails from "./pages/ServiceDetails/ServiceDetails";
 import AllServices from "./pages/AllServices/AllServices";
 import PageNotFound from "./components/PageNotFound/PageNotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import ContactUs from "./pages/ContactUs/ContactUs";
+import AboutUs from "./pages/AboutUs/AboutUs";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<AllCourses />} />
         <Route path="/services" element={<AllServices />} />
+        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/courses/:id" element={<CourseDetails />} />
         <Route path="/services/:serviceid" element={<ServiceDetails />} />
 

@@ -32,12 +32,12 @@ function Header() {
 
         {/* Navigation Links (hidden on small screens) */}
         <div className="hidden md:flex items-center gap-8 lg:gap-10">
-          <button
+          <Link
+            to={"/"}
             className="text-[14px] poppins-family uppercase font-medium"
-            onClick={() => scrollToSection("main")}
           >
             Home
-          </button>
+          </Link>
           <Link
             className="text-[14px] poppins-family uppercase font-medium"
             to={"/courses"}
@@ -50,12 +50,12 @@ function Header() {
           >
             Services
           </Link>
-          <button
+          <Link
+            to={"/aboutus"}
             className="text-[14px] poppins-family uppercase font-medium"
-            onClick={() => scrollToSection("about")}
           >
             About
-          </button>
+          </Link>
         </div>
 
         {/* Logo */}
@@ -72,12 +72,14 @@ function Header() {
             My Learnings
           </Link>
           <Button btntext={"Login"} icon={true} color={"#000"} fs={"14px"} />
-          <Button
-            btntext={"Let’s Brainstorm"}
-            icon={false}
-            color={"#096cd5"}
-            fs={"14px"}
-          />
+          <Link to={"/contactus"}>
+            <Button
+              btntext={"Let’s Brainstorm"}
+              icon={false}
+              color={"#096cd5"}
+              fs={"14px"}
+            />
+          </Link>
         </div>
       </div>
 
@@ -94,30 +96,30 @@ function Header() {
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}
         >
-          <button
-            onClick={() => scrollToSection("main")}
+          <Link
+            to={"/"}
             className="text-[14px] poppins-family uppercase font-medium text-left"
           >
             Home
-          </button>
-          <button
+          </Link>
+          <Link
             to={"/courses"}
             className="text-[14px] poppins-family uppercase font-medium text-left"
           >
             All Courses
-          </button>
+          </Link>
           <Link
             to={"/services"}
             className="text-[14px] poppins-family uppercase font-medium text-left"
           >
             Services
           </Link>
-          <button
-            onClick={() => scrollToSection("about")}
+          <Link
+            to={"/aboutus"}
             className="text-[14px] poppins-family uppercase font-medium text-left"
           >
             About
-          </button>
+          </Link>
 
           <Link
             to="/learnings"
@@ -126,12 +128,14 @@ function Header() {
             My Learnings
           </Link>
           <Button btntext={"Login"} icon={true} color={"#000"} fs={"14px"} />
-          <Button
-            btntext={"Let’s Brainstorm"}
-            icon={false}
-            color={"#096cd5"}
-            fs={"14px"}
-          />
+          <Link to={"/contactus"}>
+            <Button
+              btntext={"Let’s Brainstorm"}
+              icon={false}
+              color={"#096cd5"}
+              fs={"14px"}
+            />
+          </Link>
         </div>
       </Drawer>
     </div>

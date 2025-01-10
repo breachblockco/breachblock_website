@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
 
 function Contactus() {
   const form = useRef();
@@ -15,12 +16,10 @@ function Contactus() {
       )
       .then(
         (result) => {
-          console.log(result.text);
-          alert("Message Sent Successfully!");
+          toast.success("Message sent successfully");
         },
         (error) => {
-          console.log(error.text);
-          alert("Failed to send message. Please try again later.");
+          toast.error("Error in sending message. Try Again");
         }
       );
 
@@ -28,6 +27,7 @@ function Contactus() {
   };
   return (
     <div className="sm:px-0" id="contact">
+      <ToastContainer />
       <h2 className="text-[#100A12] sm:text-[130px] text-[35px] font-semibold orbitron-family text-center leading-none">
         Let’s Connect.
       </h2>
