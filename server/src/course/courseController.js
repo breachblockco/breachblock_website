@@ -43,7 +43,7 @@ const createCourse = async (req, res, next) => {
       { new: true, useFindAndModify: false }
     );
 
-    console.log(filePath)
+    console.log(filePath);
 
     // delete temp files
     await fs.promises.access(filePath, fs.constants.F_OK); // Check if the file exists
@@ -55,4 +55,15 @@ const createCourse = async (req, res, next) => {
   }
 };
 
-export { createCourse };
+const listCourses = async (req, res, next) => {
+  try {
+    const courses = await courseModel
+      .find({ student: req.userId })
+      .populate("student","name");
+    res.json(courses);
+  } catch (error) {
+    return next(createHttpError(500, "Error while getting courses"));
+  }
+};
+
+export { createCourse, listCourses };

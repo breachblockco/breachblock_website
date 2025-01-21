@@ -3,7 +3,7 @@ import multer from "multer";
 import path from "node:path";
 import { fileURLToPath } from "node:url"; // Import to resolve __dirname
 import authenticate from "../middlewares/authenticate.js";
-import { createCourse } from "./courseController.js";
+import { createCourse, listCourses } from "./courseController.js";
 
 const courseRouter = express.Router();
 
@@ -24,5 +24,7 @@ courseRouter.post(
   upload.fields([{ name: "coverImage", maxCount: 1 }]),
   createCourse
 );
+
+courseRouter.get("/", authenticate, listCourses);
 
 export default courseRouter;
