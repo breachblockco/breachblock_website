@@ -59,11 +59,27 @@ const listCourses = async (req, res, next) => {
   try {
     const courses = await courseModel
       .find({ student: req.userId })
-      .populate("student","name");
+      .populate("student", "name");
     res.json(courses);
   } catch (error) {
     return next(createHttpError(500, "Error while getting courses"));
   }
 };
 
-export { createCourse, listCourses };
+const deleteCourse = async (req, res, next) => {
+  const courseId = req.params.courseId;
+
+  const course = await courseModel.findOne({ _id: courseId });
+  if (!course) {
+    return next(createHttpError(404, "Course not found"));
+  }
+
+  const coverImageSplits=course.coverImage.split("/");
+  const coverImagePublicId=coverImageSplits.at(-2)+"/"+coverImageSplits.at(-1)?.split(".")[0];
+  await cloudinary.uploader.destroy(coverImagePublicId);
+  await courseModel.deleteOne({_id:courseId})
+
+  return res.sendStatus(204);
+};
+
+export { createCourse, listCourses, deleteCourse };

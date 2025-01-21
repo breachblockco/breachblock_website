@@ -3,7 +3,7 @@ import multer from "multer";
 import path from "node:path";
 import { fileURLToPath } from "node:url"; // Import to resolve __dirname
 import authenticate from "../middlewares/authenticate.js";
-import { createCourse, listCourses } from "./courseController.js";
+import { createCourse, deleteCourse, listCourses } from "./courseController.js";
 
 const courseRouter = express.Router();
 
@@ -26,5 +26,7 @@ courseRouter.post(
 );
 
 courseRouter.get("/", authenticate, listCourses);
+
+courseRouter.delete("/:courseId",authenticate,deleteCourse)
 
 export default courseRouter;
