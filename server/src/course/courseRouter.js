@@ -20,7 +20,7 @@ const upload = multer({
 // Routes
 courseRouter.post(
   "/",
-  authenticate,
+  authenticate, 
   upload.fields([{ name: "coverImage", maxCount: 1 }]),
   createCourse
 );

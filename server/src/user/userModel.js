@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import bcrypt from "bcrypt"
+import bcrypt from "bcrypt";
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -21,6 +21,11 @@ const userSchema = new mongoose.Schema({
       ref: "Course",
     },
   ],
+  role: {
+    type: String,
+    enum: ["user", "admin"],
+    default: "user",
+  },
 });
 
 // Hash password before saving
