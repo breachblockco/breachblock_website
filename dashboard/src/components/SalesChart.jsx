@@ -22,11 +22,27 @@ ChartJS.register(
 
 function SalesChart() {
   const data = {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+    labels: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ],
     datasets: [
       {
-        label: "Sales (in $)",
-        data: [5000, 8000, 6500, 10000, 12000, 14000, 13000, 15000, 16000],
+        label: "Sales (in ₹)",
+        data: [
+          5000, 8000, 6500, 10000, 12000, 14000, 13000, 15000, 16000, 3000,
+          5000, 13000,
+        ],
         backgroundColor: "rgba(255, 255, 255, 0.2)", // Semi-transparent white for fill
         borderColor: "#FFFFFF", // White line
         borderWidth: 2,

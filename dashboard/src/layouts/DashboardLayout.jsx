@@ -1,34 +1,38 @@
 import React, { useEffect, useRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import { Outlet } from "react-router";
+import { Link, Navigate, Outlet } from "react-router";
 
 function DashboardLayout() {
-   const [isOpen, setIsOpen] = useState(false);
-   const dropdownRef = useRef(null);
-   
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const [token, setToken] = useState(localStorage.getItem("token"));
 
-   const toggleDropdown = () => {
-     setIsOpen((prev) => !prev);
-   };
+  if (!token) {
+    return <Navigate to={"/auth/login"} replace />;
+  }
 
-   const closeDropdown = (e) => {
-     // Close the dropdown if the click is outside the dropdown container
-     if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-       setIsOpen(false);
-     }
-   };
+  const toggleDropdown = () => {
+    setIsOpen((prev) => !prev);
+  };
 
-   useEffect(() => {
-     // Attach click event listener when dropdown is open
-     if (isOpen) {
-       document.addEventListener("mousedown", closeDropdown);
-     }
+  const closeDropdown = (e) => {
+    // Close the dropdown if the click is outside the dropdown container
+    if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+      setIsOpen(false);
+    }
+  };
 
-     // Cleanup event listener on unmount or when dropdown is closed
-     return () => {
-       document.removeEventListener("mousedown", closeDropdown);
-     };
-   }, [isOpen]);
+  useEffect(() => {
+    // Attach click event listener when dropdown is open
+    if (isOpen) {
+      document.addEventListener("mousedown", closeDropdown);
+    }
+
+    // Cleanup event listener on unmount or when dropdown is closed
+    return () => {
+      document.removeEventListener("mousedown", closeDropdown);
+    };
+  }, [isOpen]);
   return (
     <div className="w-full h-screen bg-zinc-500">
       <div className="h-[72px] w-full bg-[#273142] px-10 flex justify-between items-center">
@@ -76,14 +80,24 @@ function DashboardLayout() {
       </div>
       <div className="flex">
         <div className="w-[20vw] h-[calc(100vh-72px)] bg-[#273142] px-6 py-3 text-white poppins-family flex flex-col gap-1">
-          {["Dashboard", "Courses", "Favourites"].map((elem, index) => (
-            <h4
-              className="py-3 px-16 rounded-lg text-lg hover:bg-zinc-300/10 transition-all duration-300"
-              key={index}
-            >
-              {elem}
-            </h4>
-          ))}
+          <Link
+            to={"/dashboard/home"}
+            className="py-3 px-16 rounded-lg text-lg hover:bg-zinc-300/10 transition-all duration-300"
+          >
+            Dashboard
+          </Link>
+          <Link
+            to={"/dashboard/courses"}
+            className="py-3 px-16 rounded-lg text-lg hover:bg-zinc-300/10 transition-all duration-300"
+          >
+            Courses
+          </Link>
+          <Link
+            to={"/dashboard/favourites"}
+            className="py-3 px-16 rounded-lg text-lg hover:bg-zinc-300/10 transition-all duration-300"
+          >
+            Favourites
+          </Link>
         </div>
         <div className="h-[calc(100vh-72px)] w-full bg-[#1b2431] overflow-y-auto flex flex-col gap-10 px-5 py-4 poppins-family main-part">
           <Outlet />

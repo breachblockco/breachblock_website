@@ -5,8 +5,8 @@ import { IoMenu } from "react-icons/io5";
 import { Drawer, IconButton } from "@mui/material";
 
 function Header() {
-  const scrollToSection = (ref) => {
-    document.getElementById(ref).scrollIntoView({ behavior: "smooth" });
+  const redirectToLogin = (ref) => {
+    window.location.href = "http://localhost:5173/auth/login";
   };
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -71,7 +71,9 @@ function Header() {
           >
             My Learnings
           </Link>
-          <Button btntext={"Login"} icon={true} color={"#000"} fs={"14px"} />
+          <Link onClick={redirectToLogin}>
+            <Button btntext={"Login"} icon={true} color={"#000"} fs={"14px"} />
+          </Link>
           <Link to={"/contactus"}>
             <Button
               btntext={"Let’s Brainstorm"}
